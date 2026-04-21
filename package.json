@@ -13,6 +13,7 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
+    "seed": "tsx seed.ts",
     "postinstall": "prisma generate"
   },
   "keywords": [],
