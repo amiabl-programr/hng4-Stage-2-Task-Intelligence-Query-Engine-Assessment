@@ -13,7 +13,8 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "seed": "tsx seed.ts",
+    "seed": "tsx src/utils/seed_data/seed.ts",
+    "seed:prod": "node dist/utils/seed_data/seed.js",
     "postinstall": "prisma generate"
   },
   "keywords": [],
