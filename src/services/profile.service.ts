@@ -19,13 +19,12 @@ export const parseNaturalLanguageQuery = (query: string): ProfileFilters | null 
   const hasFemale = changeQueryToLowerCase.includes('female');
   
   // If both male and female are mentioned, we should not set gender filter
-  // This handles cases like "male and female teenagers above 17" correctly
   if (hasMale && !hasFemale) {
     filters.gender = 'male';
   } else if (hasFemale && !hasMale) {
     filters.gender = 'female';
   }
-  // If both or neither are mentioned, don't set gender filter`
+
 
   // Parse age groups
   if (changeQueryToLowerCase.includes('child') || changeQueryToLowerCase.includes('children')) {
